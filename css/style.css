@@ -3,6 +3,7 @@
     --green: #BCEC30;
 	--light-green: #E1FF8F;
     --white: #FFFFFF;
+    scroll-behavior: smooth;
 }
 
 * {
