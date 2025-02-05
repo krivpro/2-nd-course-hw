@@ -52,7 +52,7 @@ while (n >= 50) {
   num++;
 }
 
-console.log(num);
+console.log(`Циклов ${num}`);
 
 // task-6
 
