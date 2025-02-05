@@ -278,6 +278,10 @@ h4 {
     padding-bottom: 144px;
 }
 
+.game-box__img {
+    border-radius: 30px;
+}
+
 .game-box__title {
     margin-top: 46px;
     margin-bottom: 72px;
