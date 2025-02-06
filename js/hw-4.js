@@ -18,15 +18,8 @@ while (b < 6) {
 
 // task-3
 
-let c = 1;
-
-while (c < 23) {
-  if (c < 7){
-    c++;
-  continue;
-  }
-  console.log(c);
-  c++;
+for (let i = 7; i <= 22; i++) {
+  console.log(i);
 }
 
 // task-4
@@ -38,7 +31,7 @@ const obj = {
 }
 
 for (let key in obj) {
-   console.log(`${key}: ${obj[key]}`);
+   console.log(`${key} — зарплата ${obj[key]} долларов`);
 }
 
 // task-5
