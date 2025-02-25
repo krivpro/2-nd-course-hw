@@ -210,7 +210,7 @@
             Мини-игры
         </h2>
         <div class="game-box__cards">
-            <a href="#" class="game-box__card game-card game-card_big game-box__card_reverse" id="game-1">
+            <div class="game-box__card game-card game-card_big game-box__card_reverse" id="game-1">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
                         Угадай число
@@ -218,13 +218,13 @@
                     <p class="text game-card__text">
                         Попробуй угадать случайное число от 1 до 100.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="guessNumber();">
                         Играть!
                     </div>
                 </div>
                 <img class="game-box__img" src="img/game-1.svg" alt="Угадай число">
-            </a>
-            <a href="#" class="game-box__card game-card game-card_big" id="game-2">
+            </div>
+            <div class="game-box__card game-card game-card_big" id="game-2">
                 <img class="game-box__img" src="img/game-2.svg" alt="Простая арифметика">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
@@ -233,12 +233,12 @@
                     <p class="text game-card__text">
                         Попробуй решить простые арифметические задачи.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="">
                         Играть!
                     </div>
                 </div>
-            </a>
-            <a href="#" class="game-box__card game-card game-card_big game-box__card_reverse" id="game-3">
+            </div>
+            <div class="game-box__card game-card game-card_big game-box__card_reverse" id="game-3">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
                         Переверни текст
@@ -246,13 +246,13 @@
                     <p class="text game-card__text">
                         Попробуй ввести текст, который будет перевернут.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="">
                         Играть!
                     </div>
                 </div>
                 <img class="game-box__img" src="img/game-3.svg" alt="Переверни текст">
-            </a>
-            <a href="#" class="game-box__card game-card game-card_big" id="game-4">
+            </div>
+            <div class="game-box__card game-card game-card_big" id="game-4">
                 <img class="game-box__img" src="img/game-4.svg" alt="Викторина">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
@@ -261,12 +261,12 @@
                     <p class="text game-card__text">
                         Отвечай на вопросы викторины с вариантами ответов.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="">
                         Играть!
                     </div>
                 </div>
-            </a>
-            <a href="#" class="game-box__card game-card game-card_big game-box__card_reverse" id="game-5">
+            </div>
+            <div class="game-box__card game-card game-card_big game-box__card_reverse" id="game-5">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
                         Камень, ножницы, бумага
@@ -274,13 +274,13 @@
                     <p class="text game-card__text">
                         Сыграй в популярную игру против компьютера.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="">
                         Играть!
                     </div>
                 </div>
                 <img class="game-box__img" src="img/game-5.svg" alt="Камень, ножницы, бумага">
-            </a>
-            <a href="#" class="game-box__card game-card game-card_big" id="game-6">
+            </div>
+            <div class="game-box__card game-card game-card_big" id="game-6">
                 <img class="game-box__img" src="img/game-6.svg" alt="Генератор случайных цветов">
                 <div class="game-card__info game-card__info_big">
                     <h3 class="game-card__name">
@@ -289,11 +289,11 @@
                     <p class="text game-card__text game-card__text_big">
                         Игра, в которой при клике на кнопку фон страницы меняется на случайный.
                     </p>
-                    <div class="btn game-box__btn">
+                    <div class="btn game-box__btn" onclick="">
                         Играть!
                     </div>
                 </div>
-            </a>
+            </div>
         </div>    
     </div>
     <footer class="footer overflow">
@@ -301,5 +301,7 @@
             Все права защищены.
         </a>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
