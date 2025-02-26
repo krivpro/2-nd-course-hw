@@ -1,43 +1,41 @@
-// function getRandomInt(min, max) {
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min + 1)) + min;
-//   }
-
-// let randomNum = getRandomInt(1, 100);
-// console.log(randomNum);
-
-// function guessNumber() {
-
-//     let whatNum = prompt('Введите число от 1 до 100');
-
-//     while (whatNum !== randomNum) {
-//         if (whatNum > randomNum) {
-//             alert('Заданное число меньше');
-//         } else if (whatNum < randomNum) {
-//             alert('Заданное число больше');
-//         } else if (whatNum !== randomNum) {
-//             alert('Угадал');
-//         } else {
-//             alert('Попробуй снова');
-//         }
-//     }
-// }
-
 function guessNumber() {
 
-  let randomNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(randomNumber);
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
 
-  let whatNum = prompt('Введите число от 1 до 100');
+    let attempts = 0;
 
-  if (whatNum > randomNumber) {
-      prompt('Заданное число меньше');
-  } else if (whatNum < randomNumber) {
-      prompt('Заданное число больше');
-  } else if (whatNum !== randomNumber) {
-      alert('Угадал');
-  } else {
-      prompt('Попробуй снова');
-  }
+    alert('Добро пожаловать в игру "Угадай число"!');
+    alert('Попробуй угадать число от 1 до 100.');
+
+    while (true) {
+        const guess = prompt('Введите ваше предположение:');
+
+        if (guess === null) {
+            alert('Вы отменили игру. До свидания!');
+            break;
+        }
+
+        if (isNaN(guess)) {
+            alert('Пожалуйста, введите целое число.');
+            continue;
+        }
+
+        if (guess > 100) {
+            alert('Ваше число больше 100');
+            continue;
+        }
+
+        attempts++;
+
+        const userGuess = parseInt(guess);
+
+        if (userGuess < secretNumber) {
+            alert('Загаданное число больше.');
+        } else if (userGuess > secretNumber) {
+            alert('Загаданное число меньше.');
+        } else {
+            alert(`Поздравляю! Вы угадали число ${secretNumber} за ${attempts} попыток.`);
+            break;
+        }
+    }
 }
