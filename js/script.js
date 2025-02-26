@@ -1,11 +1,11 @@
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+// function getRandomInt(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+//   }
 
-let randomNum = getRandomInt(1, 100);
-console.log(randomNum);
+// let randomNum = getRandomInt(1, 100);
+// console.log(randomNum);
 
 // function guessNumber() {
 
@@ -23,3 +23,21 @@ console.log(randomNum);
 //         }
 //     }
 // }
+
+function guessNumber() {
+
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  console.log(randomNumber);
+
+  let whatNum = prompt('Введите число от 1 до 100');
+
+  if (whatNum > randomNumber) {
+      prompt('Заданное число меньше');
+  } else if (whatNum < randomNumber) {
+      prompt('Заданное число больше');
+  } else if (whatNum !== randomNumber) {
+      alert('Угадал');
+  } else {
+      prompt('Попробуй снова');
+  }
+}
