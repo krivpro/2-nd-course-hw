@@ -1,3 +1,5 @@
+// game-1
+
 function guessNumber() {
 
     const secretNumber = Math.floor(Math.random() * 100) + 1;
@@ -37,5 +39,55 @@ function guessNumber() {
             alert(`Поздравляю! Вы угадали число ${secretNumber} за ${attempts} попыток.`);
             break;
         }
+    }
+}
+
+// game-2
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+   
+function getRandomOperator() {
+    const operators = ['+', '-', '*', '/'];
+    return operators[Math.floor(Math.random() * operators.length)];
+}
+   
+function solveExpression(num1, operator, num2) {
+    switch(operator) {
+    case '+':
+    return num1 + num2;
+    case '-':
+    return num1 - num2;
+    case '*':
+    return num1 * num2;
+    case '/':
+    return num1 / num2;
+    default:
+    return null;
+    }
+}
+   
+function mathGame() {
+   
+    const num1 = getRandomNumber(1, 10);
+    const num2 = getRandomNumber(1, 10);
+    const operator = getRandomOperator();
+    
+    const expression = `${num1} ${operator} ${num2}`;
+    
+    const userAnswer = prompt(`Решите задачу: ${expression}`);
+    
+    if (isNaN(userAnswer)) {
+        alert('Пожалуйста, введите число!');
+        return;
+    }
+    
+    const correctAnswer = solveExpression(num1, operator, num2);
+    
+    if (parseFloat(userAnswer) === correctAnswer) {
+    alert('Правильно!');
+    } else {
+    alert(`Неверно! Правильный ответ: ${correctAnswer}`);
     }
 }
