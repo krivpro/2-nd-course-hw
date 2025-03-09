@@ -91,3 +91,69 @@ function mathGame() {
     alert(`Неверно! Правильный ответ: ${correctAnswer}`);
     }
 }
+
+// game-3
+
+function flipGame() {
+
+    const userText = prompt('Введите текст');
+
+    let flipText = userText.split('').reverse().join('');
+    alert(flipText);
+}
+
+// game-4
+
+const quiz = [
+    {
+        question: "Какой цвет небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+
+function displayQuestion(question) {
+    let output = `${question.question}\n\n`;
+    question.options.forEach(option => {
+        output += option + "\n";
+    });
+    return output;
+}
+
+let score = 0;
+
+function questionGame() {
+
+    for (let i = 0; i < quiz.length; i++) {
+
+        const questionText = displayQuestion(quiz[i]);
+        
+        const userAnswer = parseInt(prompt(questionText + "\n\nВведите номер ответа (1, 2 или 3)"));
+        
+        if (!isNaN(userAnswer) && userAnswer >= 1 && userAnswer <= 3) {
+            if (userAnswer === quiz[i].correctAnswer) {
+                score++;
+                alert("Правильно!");
+            } else {
+                alert("Неверно. Правильный ответ: " + quiz[i].correctAnswer);
+            }
+        } else {
+            alert("Неверный формат ответа. Введите число 1, 2 или 3.");
+            i--; 
+        }
+    }
+
+alert(`Викторина завершена!\nВы набрали ${score} из ${quiz.length} баллов.`);
+
+score = 0;
+};
