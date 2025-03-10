@@ -157,3 +157,34 @@ alert(`Викторина завершена!\nВы набрали ${score} из
 
 score = 0;
 };
+
+//game-5
+
+function getComputerChoice() {
+    const choices = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * 3);
+    return choices[randomIndex];
+}
+
+function rockPaperScissors() {
+
+    const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+
+    const computerChoice = getComputerChoice();
+
+    let result;
+
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Компьютер победил!";
+    }
+
+    alert(`Ваш выбор: ${userChoice} Выбор компьютера: ${computerChoice} ${result}`);   
+}
