@@ -489,7 +489,6 @@ h4 {
         height: 55px;
         padding: 16px 28px;
         font-size: 1rem;
-        pointer-events: none;
     }
 
     .about {
