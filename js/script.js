@@ -188,3 +188,42 @@ function rockPaperScissors() {
 
     alert(`Ваш выбор: ${userChoice} Выбор компьютера: ${computerChoice} ${result}`);   
 }
+
+//game-6
+
+const colorBlock = document.querySelectorAll('#game-6');
+const colorBtn = document.querySelectorAll('.color-btn');
+
+function getRandomColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+if (colorBtn.length > 0) {
+    colorBtn[0].addEventListener('click', () => {
+        colorBlock.forEach(box => {
+            box.style.backgroundColor = getRandomColor();
+        });
+    });
+}
+
+//scroll-btn
+
+ const scrollBtn = document.querySelector('.scroll-btn');
+
+ function smoothScroll(target) {
+     const targetElement = document.querySelector(target);
+     targetElement.scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+     });
+ }
+
+ scrollBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+     if (window.innerWidth > 768) {
+         smoothScroll('.about');
+     } else {
+         smoothScroll('.game-box');
+     }
+ });
