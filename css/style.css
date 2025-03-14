@@ -107,6 +107,7 @@ h4 {
     background: none;
     border: 1px solid var(--dark);
     color: var(--dark);
+    
 }
 
 .bg-img {
@@ -346,7 +347,7 @@ h4 {
 
 .game-card__text {
     margin-bottom: 36px;
-    width: 423px;;
+    width: 423px;
 }
 
 .game-card__text_big {
@@ -372,7 +373,7 @@ h4 {
     }
     
     h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     h3 {
@@ -402,11 +403,10 @@ h4 {
     }
     
     .img-star-1 {
-        top: -103px;
-        right: -113px;
-        width: 223px;
-        height: 239px;
-        transform: rotate(108deg);
+        top: -83.23px;
+        right: -84.23px;
+        width: 238.52px;
+        height: 238.57px;
         flex-shrink: 0;
     }
     
@@ -472,6 +472,8 @@ h4 {
     .top__text {
         margin-bottom: 36px;
         text-align: center;
+        line-height: 129%;
+        width: 296px;
     }
 
     .top__running-line {
@@ -508,6 +510,10 @@ h4 {
         margin-bottom: 48px;
     }
 
+    .game-box__cards {
+        gap: 24px;
+    }
+
     .game-box__card {
         flex-direction: column;
     }
@@ -526,10 +532,13 @@ h4 {
 
     .game-card__name {
         width: auto;
+        margin-bottom: 16px;
     }
 
     .game-card__text {
         width: auto;
+        line-height: 133%;
+        margin-bottom: 32px;
     }
 
     .game-card__text_big {
@@ -545,7 +554,7 @@ h4 {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .game-card__info {
         align-items: start;
     }
