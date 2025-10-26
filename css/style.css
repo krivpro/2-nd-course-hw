@@ -55,6 +55,12 @@ h3 {
     font-size: 3rem;
 }
 
+h5 {
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
 h4 {
     font-size: 2rem;
 }
@@ -194,6 +200,32 @@ h4 {
     margin-bottom: 48px;
 }
 
+.top__running-line {
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: var(--green);
+    display: flex;
+    gap: 51px;
+}
+
+.running-line__content {
+    display: flex;
+    white-space: nowrap;
+    gap: 51px;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+}
+
 .about {
     background-color: var(--dark);
     padding-top: 94px;
@@ -278,6 +310,10 @@ h4 {
     padding-bottom: 144px;
 }
 
+.game-box__img {
+    border-radius: 30px;
+}
+
 .game-box__title {
     margin-top: 46px;
     margin-bottom: 72px;
@@ -343,6 +379,10 @@ h4 {
     
     h4 {
         font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 16px;
     }
 
     .text {
@@ -432,11 +472,22 @@ h4 {
         text-align: center;
     }
 
+    .top__running-line {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .top__running-line img {
+        width: 19px;
+        height: 19px;
+    }
+
     .btn {
         width: 285px;
         height: 55px;
         padding: 16px 28px;
         font-size: 1rem;
+        pointer-events: none;
     }
 
     .about {
@@ -466,6 +517,36 @@ h4 {
 
     .game-card__info {
         padding: 29px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-card__name {
+        width: auto;
+    }
+
+    .game-card__text {
+        width: auto;
+    }
+
+    .game-card__text_big {
+        width: auto;
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+    .footer__link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .game-card__info {
+        align-items: start;
     }
 
     .game-card__name {
@@ -478,13 +559,5 @@ h4 {
 
     .game-card__text_big {
         width: 235px;
-    }
-
-    .footer {
-        height: 100px;
-    }
-
-    .footer__link {
-        font-size: 1rem;
     }
 }
