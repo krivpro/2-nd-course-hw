@@ -3,6 +3,7 @@
     --green: #BCEC30;
 	--light-green: #E1FF8F;
     --white: #FFFFFF;
+    --gray: #F7F7F7;
     scroll-behavior: smooth;
 }
 
@@ -13,9 +14,13 @@
 
 body {
     font-family: "Montserrat", serif;
-    overflow-x: hidden;
     font-size: 16px;
     color: var(--dark);
+    background-color: var(--dark);
+}
+
+.overflow {
+    overflow-x: hidden;
 }
 
 .container {
@@ -48,6 +53,12 @@ h2 {
 
 h3 {
     font-size: 3rem;
+}
+
+h5 {
+    font-size: 30px;
+    line-height: 110%;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -145,6 +156,30 @@ h4 {
     left: 42px;
 }
 
+.img-star-10 {
+    top: 126px;
+    right: 45px;
+}
+
+.img-star-11 {
+    top: 93px;
+    right: 124px;
+}
+
+.img-star-12 {
+    bottom: 65px;
+    right: 52px;
+}
+
+.img-star-13 {
+    bottom: 45px;
+    right: 150px;
+}
+
+.section-title {
+    color: var(--white);
+}
+
 .top {
     background-color: var(--light-green);
     height: 800px;
@@ -152,7 +187,8 @@ h4 {
 }
 
 .top__offer {
-    padding-top: 196px; 
+    padding-top: 196px;
+    position: inherit;
 }
 
 .top__title {
@@ -164,6 +200,32 @@ h4 {
     margin-bottom: 48px;
 }
 
+.top__running-line {
+    position: absolute;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: var(--green);
+    display: flex;
+    gap: 51px;
+}
+
+.running-line__content {
+    display: flex;
+    white-space: nowrap;
+    gap: 51px;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+}
+
 .about {
     background-color: var(--dark);
     padding-top: 94px;
@@ -172,7 +234,6 @@ h4 {
 
 .about__title {
     margin-bottom: 24px;
-    color: var(--white);
 }
 
 .about__text {
@@ -224,7 +285,7 @@ h4 {
 }
 
 .about__img {
-    max-width: fit-content;
+    width: 100%;
 }
 
 .game-card__info {
@@ -238,7 +299,265 @@ h4 {
     padding: 8px 16px 10px 16px;
     align-items: center;
     border-radius: 52.582px;
-    background: #F7F7F7;
+    background: var(--gray);
     width: fit-content;
     margin-bottom: 16px;
+}
+
+.game-box {
+    background-color: var(--dark);
+    position: relative;
+    padding-bottom: 144px;
+}
+
+.game-box__img {
+    border-radius: 30px;
+}
+
+.game-box__title {
+    margin-top: 46px;
+    margin-bottom: 72px;
+}
+
+.game-box__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.game-box__card {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+.game-card__info_big {
+    padding: 48px;
+    width: 100%;
+}
+
+.game-card__name {
+    margin-bottom: 24px;
+    width: 450px;
+}
+
+.game-card__text {
+    margin-bottom: 36px;
+    width: 423px;;
+}
+
+.game-card__text_big {
+    width: 100%;
+}
+
+.footer {
+    background-color: var(--green);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1240px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 1rem;
+        line-height: normal;
+    }
+    
+    .text-bold {
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+    .img-rays {
+        display: none;
+    }
+    
+    .img-star-1 {
+        top: -103px;
+        right: -113px;
+        width: 223px;
+        height: 239px;
+        transform: rotate(108deg);
+        flex-shrink: 0;
+    }
+    
+    .img-star-2 {
+        top: 97px;
+        left: 37px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .img-star-3 {
+        top: 64px;
+        left: 91px;
+        width: 21px;
+        height: 21px;
+    }
+    
+    .img-star-4 {
+        top: 557px;
+        right: 86px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .img-star-5 {
+        top: 580px;
+        right: 34px;
+        width: 39px;
+        height: 41px;
+    }
+    
+    .img-star-7 {
+        top: 109px;
+        right: -110px;
+    }
+    
+    .img-star-8 {
+        top: 771px;
+        left: 26px;
+    }
+    
+    .img-star-9 {
+        top: 824px;
+        left: 42px;
+    }
+
+    .top {
+        height: 700px;
+    }
+    
+    .top__offer {
+        padding-top: 147px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .top__title {
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    
+    .top__text {
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    .top__running-line {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .top__running-line img {
+        width: 19px;
+        height: 19px;
+    }
+
+    .btn {
+        width: 285px;
+        height: 55px;
+        padding: 16px 28px;
+        font-size: 1rem;
+        pointer-events: none;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .game-box {
+        padding-bottom: 49px;
+    }
+
+    .game-box__star {
+        display: none;
+    }
+
+    .game-box__title {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .game-box__card {
+        flex-direction: column;
+    }
+
+    .game-box__card_reverse {
+        flex-direction: column-reverse;
+    }
+
+    .game-card__info {
+        padding: 29px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-card__name {
+        width: auto;
+    }
+
+    .game-card__text {
+        width: auto;
+    }
+
+    .game-card__text_big {
+        width: auto;
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+    .footer__link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .game-card__info {
+        align-items: start;
+    }
+
+    .game-card__name {
+        width: 285px;
+    }
+
+    .game-card__text {
+        width: 275px;
+    }
+
+    .game-card__text_big {
+        width: 235px;
+    }
 }
